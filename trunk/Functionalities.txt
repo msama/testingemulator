@@ -1,0 +1,18 @@
+runtime method trap
+-System.currentTimeMillisec
+-Thread.sleep
+
+runtime classmask
+-jsr82
+-jsr75pim
+-jsr75fc
+
+Connector patch in order to load file with com.ibm.oti pathced library
+
+Scripting support
+
+EmulatedFileSystem
+
+stub implementation for JSR
+
+Vibration

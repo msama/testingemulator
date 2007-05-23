@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/LandmarkStoreSchema" xmlns:tns="http://www.example.org/LandmarkStoreSchema" elementFormDefault="qualified">
+
+    <complexType name="LandmarkStore">
+    	<sequence>
+    		<sequence id="Categories">
+    			<element name="Category" type="tns:Category"
+    				minOccurs="0" maxOccurs="unbounded">
+    			</element>
+    		</sequence>
+    		<sequence id="Landmarks">
+    			<element name="Landmark" type="tns:Landmark"
+    				minOccurs="0" maxOccurs="unbounded">
+    			</element>
+    		</sequence>
+    	</sequence>
+
+    	<attribute name="Name" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="Category">
+    	<attribute name="Id" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="Landmark">
+    	<sequence>
+    		<element name="Coordinates" type="tns:Coordinates" minOccurs="1" maxOccurs="1"></element>
+    		<element name="AddressInfo" type="tns:AddressInfo" minOccurs="1"></element>
+    	</sequence>
+    	<attribute name="Name" type="string" use="required"></attribute>
+    	<attribute name="Description" type="string" use="optional"></attribute>
+    </complexType>
+    
+    <complexType name="Coordinates">
+    	<attribute name="Altitude" type="float" use="required"></attribute>
+    	<attribute name="Latitude" type="double" use="required"></attribute>
+    	<attribute name="Longitude" type="double" use="required"></attribute>
+    </complexType>
+
+    <complexType name="AddressInfo">
+    	<attribute name="BuildingFloor" type="string" use="optional"></attribute>
+    	<attribute name="BuildingName" type="string"></attribute>
+    	<attribute name="BuildingRoom" type="string"></attribute>
+    	<attribute name="BuildingZone" type="string"></attribute>
+    	<attribute name="City" type="string"></attribute>
+    	<attribute name="Country" type="string"></attribute>
+    	<attribute name="CountryCode" type="string"></attribute>
+    	<attribute name="County" type="string"></attribute>
+    	<attribute name="Crossing1" type="string"></attribute>
+    	<attribute name="Crossing2" type="string"></attribute>
+    	<attribute name="District" type="string"></attribute>
+    	<attribute name="Extension" type="string"></attribute>
+    	<attribute name="PhoneNumber" type="string"></attribute>
+    	<attribute name="PostalCode" type="string"></attribute>
+    	<attribute name="State" type="string"></attribute>
+    	<attribute name="Street" type="string"></attribute>
+    	<attribute name="URL" type="string"></attribute>
+    </complexType>
+
+    <element name="LandmarkStore" type="tns:LandmarkStore"></element>
+</schema>

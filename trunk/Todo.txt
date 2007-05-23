@@ -1,0 +1,24 @@
+Icons in the MidletLauncher list
+
+Create a fake signal level handler
+
+Networking needs to be implementhed
+
+Ringtones mp3 - fix the implementation of the sound library
+
+JSR82 communication support
+
+JSR75FC permission in file access
+
+JSR192
+- propertyCHange in EmulatedLocationJPanel
+
+
+
+JSR75PIM need to be implementhed
+
+Allow the emulator to access the midlet
+
+add profiler
+
+saving roots configurations
