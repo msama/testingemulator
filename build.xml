@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TestingEmulator" default="jar" basedir=".">
+    <property name="bin" location="bin"/>
+    <property name="lib" location="lib"/>
+    <property name="dist" location="dist"/>
+    <property name="jarfile" location="${dist}/${ant.project.name}.jar"/>
+	<property name="manifest" location="Manifest.mf"/>
+
+    <fileset id="lib.jars" dir="${lib}">
+        <include name="**/*.jar"/>
+    </fileset>
+
+    <path id="lib.path">
+    	<!--<pathelement location="${j2meunit}"/>-->
+    	<pathelement path="${src}/"/>
+    </path>
+	
+    <target name="clean" description="Remove build and dist directories">
+        <delete dir="${bin}"/>
+        <delete dir="${dist}"/>
+    </target>
+	
+    <target name="jar" description="Build jar">
+        <mkdir dir="${dist}"/>
+        <jar jarfile="${jarfile}" basedir="${bin}" manifest="${manifest}">
+            <!-- Merge library jars into final jar file -->
+            <zipgroupfileset refid="lib.jars"/>
+        </jar>
+    </target>
+</project>

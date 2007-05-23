@@ -1,0 +1,2 @@
+if a rootfilesystem is changed then the text fields are not updated
+BT discovered device does not scroll

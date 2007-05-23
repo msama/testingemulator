@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: ucl.cs.testingEmulator.core.TestingEmulator
+Aucthor: Sama Michele
+Splashscreen-Image: resources/Splashscreen.jpg
+Script0: ucl.cs.testingEmulator.contexNotifierScripts.MobiSys2007
+Script1: ucl.cs.testingEmulator.contexNotifierScripts.Demo26March2007
+
