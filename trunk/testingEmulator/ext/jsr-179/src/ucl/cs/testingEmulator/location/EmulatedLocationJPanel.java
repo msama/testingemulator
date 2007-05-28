@@ -432,7 +432,7 @@ public class EmulatedLocationJPanel extends JPanel implements PropertyChangeList
 		else if(propertyName.equals(TestingLocationProvider.LATITUDE_UPDATED))
 		{
 			double d=((Double)evt.getNewValue()).doubleValue();
-			this.getJSliderLongitude().setValue((int)Math.round(d));
+			this.getJSliderLatitude().setValue((int)Math.round(d));
 		}
 		else if(propertyName.equals(TestingLocationProvider.LOCATION_VALIDITY_UPDATED))
 		{
@@ -442,7 +442,7 @@ public class EmulatedLocationJPanel extends JPanel implements PropertyChangeList
 		else if(propertyName.equals(TestingLocationProvider.LONGITUDE_UPDATED))
 		{
 			double d=((Double)evt.getNewValue()).doubleValue();
-			this.getJSliderLatitude().setValue((int)(int)Math.round(d));
+			this.getJSliderLongitude().setValue((int)(int)Math.round(d));
 		}
 		else if(propertyName.equals(TestingLocationProvider.SPEED_UPDATED))
 		{
