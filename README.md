@@ -1,0 +1,4 @@
+# testingemulator
+Automatically exported from code.google.com/p/testingemulator
+
+The main idea behind the emulation is to run a J2ME application inside a J2SE virtual machine. Such an approach is possible because the base J2ME class library for limited connected devices, CLDC, is a subset of the standard Java environment. We provide a JavaBeans? based implementation for the stub of additional J2ME libraries. Our emulator extends the Microemulator project with support for scripting and context manipulation, including time, thread delays, root filesystems, Bluetooth device discovery and location. We are also implementing 1)cross-emulation of applications based on mobility traces from a real context, and 2)a J2SE test oracle to assert the validity of context-dependent modifications in the MIDlet by sharing Rules and Context information.
